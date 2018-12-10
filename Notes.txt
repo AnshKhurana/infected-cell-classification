@@ -1,0 +1,12 @@
+Malaria is diagnosed by observing blood films.
+Need to come up with an algorithm to classify if a person has malaria
+
+There are 6 categories of cells in the images:
+    - red blood cell
+    - trophozoite
+    - ring
+    - schizont
+    - difficult
+    - gametocyte
+
+
