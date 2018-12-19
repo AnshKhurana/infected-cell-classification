@@ -2,11 +2,10 @@ Malaria is diagnosed by observing blood films.
 Need to come up with an algorithm to classify if a person has malaria
 
 There are 6 categories of cells in the images:
-    - red blood cell
-    - trophozoite
-    - ring
-    - schizont
-    - difficult
-    - gametocyte
-
+    - red blood cell -> RED        | (255,0,0)
+    - trophozoite    -> PURPLE     | (32,32,255)
+    - ring           -> YELLOW     | (255,255,0)
+    - schizont       -> ORANGE     | (255,128,0)
+    - difficult      -> BLACK      | (0,0,0)
+    - gametocyte     -> PINK       | (255,128, 255)
 
