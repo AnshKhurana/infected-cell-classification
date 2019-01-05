@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d04a7ce7-0082-4fdb-9a95-537ac4a766d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classifier/No_adjustments_3_500.sav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classifier/organize_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classifier/organize_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classifier/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classifier/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acknowledgements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/acknowledgements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Classifier/Random_Forest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="109">
@@ -27,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classifier/train.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="229">
@@ -220,12 +217,12 @@
       <workItem from="1545245101998" duration="9395000" />
       <workItem from="1546520713710" duration="4035000" />
       <workItem from="1546591215328" duration="6171000" />
-      <workItem from="1546613823183" duration="24966000" />
+      <workItem from="1546613823183" duration="25339000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55911000" />
+    <option name="totallyTimeSpent" value="56284000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -238,6 +235,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1280" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4947644" visible="true" weight="0.26418152" />
       <window_info id="Structure" order="1" sideWeight="0.5052356" side_tool="true" weight="0.26418152" />
@@ -253,7 +251,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32685512" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5024311" side_tool="true" weight="0.32508835" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49756888" visible="true" weight="0.9222615" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49756888" visible="true" weight="0.2385159" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32685512" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -338,10 +336,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classifier/Random_Forest.py">
+    <entry file="file://$PROJECT_DIR$/Classifier/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="147" column="36" selection-start-line="147" selection-start-column="36" selection-end-line="147" selection-end-column="36" />
+        <state relative-caret-position="229">
+          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+          <folding>
+            <element signature="e#22#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -355,13 +356,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classifier/train.py">
+    <entry file="file://$PROJECT_DIR$/Classifier/Random_Forest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
-          <folding>
-            <element signature="e#22#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="109">
+          <caret line="147" column="36" selection-start-line="147" selection-start-column="36" selection-end-line="147" selection-end-column="36" />
         </state>
       </provider>
     </entry>

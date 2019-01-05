@@ -1,1 +1,9 @@
-https://github.com/PraveenDubba/Image-Classification-using-Random-Forest
+Guide: Prof. Suyash Awate
+
+References:
+
+1. https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html
+
+2. https://opencv.org/
+
+
