@@ -1,3 +1,4 @@
-data/malaria/
+data/
 ./Classifer/labels.csv
 ./Classifer/images.csv
+*.csv
