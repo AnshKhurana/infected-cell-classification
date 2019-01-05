@@ -13,6 +13,9 @@ def load_train(image_size):
     images = []
     labels = []
     count = 0
+    num_img = 0
+    avg_height = 0
+    avg_width = 0
     debug = True
     print('Going to read training images')
     with open("../data/malaria/malaria/training.json", 'rU') as fIn:
@@ -28,6 +31,7 @@ def load_train(image_size):
         print(image_path)
         image = cv2.imread(image_path, 0)
         for obj in objects:
+            num_img = num_img + 1
             bb = obj['bounding_box']
             bb_min = bb['minimum']
             bb_max = bb['maximum']
@@ -35,6 +39,8 @@ def load_train(image_size):
             c_min = bb_min['c']
             r_max = bb_max['r']
             c_max = bb_max['c']
+            avg_height = avg_height + r_max - r_min
+            avg_width = avg_width + c_max - c_min
             obj_image = image[r_min:r_max, c_min:c_max]
             obj_image = cv2.resize(obj_image, (image_size, image_size), 0, 0, cv2.INTER_LINEAR)
             obj_image = obj_image.astype(np.float32)
@@ -62,7 +68,11 @@ def load_train(image_size):
 
     images = np.array(images)
     labels = np.array(labels)
+    avg_width = avg_width/num_img
+    avg_height = avg_height/num_img
 
+    print("Average height for patch = " + str(avg_height))
+    print("Average width for patch = " + str(avg_width))
     return images, labels
 
 def read_data():
