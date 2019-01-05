@@ -12,7 +12,7 @@ from sklearn.externals import joblib
 from organize_data import load_train
 
 
-img_size = 32
+img_size = 64
 num_channels = 3
 classes = ["Normal", "Infected"]
 
@@ -57,17 +57,17 @@ y_pred_test = rf.predict(x_test)
 # training metrics
 print("Training metrics:")
 print(sklearn.metrics.classification_report(y_true=y_train_v, y_pred=y_pred_train))
-print(sklearn.metrics.accuracy_score(y_true=y_train_v, y_pred=y_pred_train))
+print("Training accuracy: " + str(sklearn.metrics.accuracy_score(y_true=y_train_v, y_pred=y_pred_train)*100) + "%")
 
 # test data metrics
 print("Test data metrics:")
 print(sklearn.metrics.classification_report(y_true=y_test_v, y_pred=y_pred_test))
-print(sklearn.metrics.accuracy_score(y_true=y_test_v, y_pred=y_pred_test))
+print("Testing accuracy: " + str(sklearn.metrics.accuracy_score(y_true=y_test_v, y_pred=y_pred_test)*100) + "%")
 
 # Saving current Model
 
 # save the model to disk
-filename = 'No_adjustments_3_500.sav'
+filename = 'Grayscale_64_600.sav'
 pickle.dump(rf, open(filename, 'wb'))
 
 

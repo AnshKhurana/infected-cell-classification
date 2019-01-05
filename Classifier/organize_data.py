@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 import pandas as pd
 from numpy.core.multiarray import ndarray
 
-img_size = 32
+img_size = 64
 num_channels = 3
 classes = ["Normal", "Infected"]
 def load_train(image_size):
@@ -19,14 +19,14 @@ def load_train(image_size):
         training_data = json.load(fIn)
     for img in training_data:
         count = count + 1
-        if count > 500:
+        if count > 600:
             break
         image_data = img["image"]
         objects = img["objects"]
         image_path = image_data["pathname"]
         image_path = '../data/malaria/malaria' + image_path
         print(image_path)
-        image = cv2.imread(image_path)
+        image = cv2.imread(image_path, 0)
         for obj in objects:
             bb = obj['bounding_box']
             bb_min = bb['minimum']
@@ -48,7 +48,7 @@ def load_train(image_size):
             if debug:
                 print(obj_image)
                 print(type(obj_image))
-                # print(obj_image.shape)
+                print(obj_image.shape)
                 debug = False
             images.append(obj_image)
             cat = obj['category']
