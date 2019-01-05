@@ -6,14 +6,14 @@ from matplotlib import pyplot as plt
 import pandas as pd
 from numpy.core.multiarray import ndarray
 
-img_size = 64
+img_size = 32
 num_channels = 3
 classes = ["Normal", "Infected"]
 def load_train(image_size):
     images = []
     labels = []
     count = 0
-    debug = False
+    debug = True
     print('Going to read training images')
     with open("../data/malaria/malaria/training.json", 'rU') as fIn:
         training_data = json.load(fIn)
@@ -39,7 +39,18 @@ def load_train(image_size):
             obj_image = cv2.resize(obj_image, (image_size, image_size), 0, 0, cv2.INTER_LINEAR)
             obj_image = obj_image.astype(np.float32)
             obj_image = np.multiply(obj_image, 1.0 / 255.0)
-            images.append(obj_image.flatten)
+            if debug:
+                print(obj_image.shape)
+                plt.imshow(obj_image)
+                plt.show()
+
+            obj_image = obj_image.flatten()
+            if debug:
+                print(obj_image)
+                print(type(obj_image))
+                # print(obj_image.shape)
+                debug = False
+            images.append(obj_image)
             cat = obj['category']
             if cat == "red blood cell":
                 label = 0
@@ -48,11 +59,6 @@ def load_train(image_size):
 
             labels.append(label)
 
-            if debug:
-                plt.imshow(obj_image)
-                plt.show()
-                print(label)
-                debug = False
 
     images = np.array(images)
     labels = np.array(labels)
@@ -63,9 +69,9 @@ def read_data():
     load_train(img_size)
 
 if __name__ == '__main__':
-    images, labels = load_train(img_size, classes)
+    images, labels = load_train(img_size)
     print(images.shape, labels.shape)
     # np.savetxt("images.csv", images.flatten())
-    np.savetxt("labels.csv", labels)
-    print("Data saved in CSV format")
+    # np.savetxt("labels.csv", labels)
+    print("organization completed")
     # os.chdir("~/Desktop/infected-cell-classification")
