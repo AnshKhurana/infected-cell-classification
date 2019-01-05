@@ -153,7 +153,6 @@ for train_index, test_index in sk_fold.split(x_train, y_train_v):
     # test data metrics
     print("Test data metrics:")
     print(sklearn.metrics.classification_report(y_true= y_tst_k, y_pred= y_pred_test))
-    
 
 # predictions on train
 y_pred_train = model.predict(X_train)
