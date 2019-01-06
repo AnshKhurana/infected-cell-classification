@@ -1,14 +1,13 @@
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.datasets import make_classification
+import cv2
+from matplotlib import pyplot as plt
+import numpy as np
 
-X, y = make_classification(n_samples=1000, n_features=4, n_informative=2, n_redundant=0, random_state=0, shuffle=False)
 
-print(type(X))
-print(type(y))
+im = cv2.imread("test.png")
+print(type(im))
 
-print(X.shape)
-print(y.shape)
+print(im.shape)
+print(type(im[0]))
 
-clf = RandomForestClassifier(n_estimators=100, max_depth=2, random_state=0)
-
-clf.fit(X, y)
+plt.imshow(im)
+plt.show()

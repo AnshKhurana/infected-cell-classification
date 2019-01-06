@@ -11,8 +11,8 @@ image_size = 32
 patch_width = 55
 colours = [(0, 255, 0), (255, 0, 0)]
 
-cur_model = "Models/Grayscale_32_600.sav"
-cur_image = "../data/malaria/malaria/images/0a7bfa8a-ee52-4f7a-b9c5-2919ecfa93ef.png"
+cur_model = "Models/No_adjustments_32*3_500.sav"
+cur_image = "test.png"
 
 
 if __name__ == '__main__':
@@ -20,9 +20,9 @@ if __name__ == '__main__':
     # pred_path = input("Enter path of the image: ")
     filename = cur_model
     pred_path = cur_image
-    image = cv2.imread(pred_path, 0)
+    image = cv2.imread(pred_path)
 
-    range_y, range_x = image.shape
+    range_y, range_x, channels = image.shape
     disp_image = cv2.imread(pred_path)
     # disp_image = disp_image[55:-54, 55:-54]
     obj_images = []
@@ -42,10 +42,14 @@ if __name__ == '__main__':
                 obj_image = np.multiply(obj_image, 1.0 / 255.0)
                 obj_image = obj_image.flatten()
                 label = loaded_model.predict(obj_image.reshape(1, -1))
+                print(itx)
                 if debug == 0:
                     print(label)
+                    print(disp_image.shape)
+                    print(image.shape)
+                    print(channels)
                     debug = 1
-                disp_image[itx, ity] = colours[int(label[0])]
+                disp_image[ity, itx] = colours[int(label[0])]
             else:
                 pass
     plt.imshow(disp_image)

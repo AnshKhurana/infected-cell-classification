@@ -9,7 +9,3 @@ There are 6 categories of cells in the images:
     - difficult      -> BLACK      | (0,0,0)
     - gametocyte     -> PINK       | (255,128, 255)
 
-MIC write-up:
-
-Also, I am interested in the course contents of CS 736 (Medical Image Computing). The ASC website lists no pre-requisites for the course, however, please mention any pre-requisite knowledge required. The slots for the courses haven't been released yet, so I am not sure about any clashes. If possible, I would like to take up this course in my 4th semester.   
-
