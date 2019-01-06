@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d04a7ce7-0082-4fdb-9a95-537ac4a766d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classifier/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classifier/predict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classifier/test_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classifier/test_script.py" afterDir="false" />
-    </list>
+    <list default="true" id="d04a7ce7-0082-4fdb-9a95-537ac4a766d1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,12 +225,12 @@
       <workItem from="1545245101998" duration="9395000" />
       <workItem from="1546520713710" duration="4035000" />
       <workItem from="1546591215328" duration="6171000" />
-      <workItem from="1546613823183" duration="35485000" />
+      <workItem from="1546613823183" duration="35708000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66430000" />
+    <option name="totallyTimeSpent" value="66653000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
