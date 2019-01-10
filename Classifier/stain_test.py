@@ -38,7 +38,6 @@ def transform(image, target):
 
 if __name__ == '__main__':
     transformed = transform("from.png", "test.png")
-    print(type(transformed))
     plt.imshow(transformed)
     plt.show()
 

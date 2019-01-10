@@ -11,7 +11,6 @@ from sklearn.metrics import confusion_matrix
 from sklearn.externals import joblib
 from organize_data import load_train
 
-
 img_size = 64
 num_channels = 3
 classes = ["Normal", "Infected"]
@@ -36,10 +35,8 @@ print(images[0].shape)
 print("Data loaded.")
 
 
-x_train, x_test, y_train_v, y_test_v = train_test_split(images, labels, test_size = 0.2, random_state = 2)
+x_train, x_test, y_train_v, y_test_v = train_test_split(images, labels, test_size = validation_size, random_state = 41)
 
-
-# print(x_train[:5, :])
 
 print("Dataset splitted.")
 

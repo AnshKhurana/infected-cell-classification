@@ -5,11 +5,14 @@ import numpy as np
 from matplotlib import pyplot as plt
 import pandas as pd
 from numpy.core.multiarray import ndarray
+from strain_test import transform
 
 img_size = 64
 num_channels = 3
 classes = ["Normal", "Infected"]
 def load_train(image_size):
+    # target  = input("path to target_name")
+    target_path = "../data/malaria/malaria/special/purple.png"
     images = []
     labels = []
     count = 0
@@ -29,7 +32,8 @@ def load_train(image_size):
         image_path = image_data["pathname"]
         image_path = '../data/malaria/malaria' + image_path
         print(image_path)
-        image = cv2.imread(image_path, 0)
+        # image = cv2.imread(image_path, 0)
+        image = transform(image_path, target_path)
         for obj in objects:
             num_img = num_img + 1
             bb = obj['bounding_box']
