@@ -6,23 +6,27 @@ import sklearn
 import cv2
 from matplotlib import pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
+from stain_test import transform
 
 image_size = 32
 patch_width = 65
 colours = [(0, 255, 0), (255, 0, 0)]
 
-cur_model = "Models/No_adjustments_32*3_500.sav"
-cur_image = "test.png"
+cur_model = "Models/transformed_32_RGB.sav"
+# cur_image = "test.png"
 
 
 if __name__ == '__main__':
     # filename = input("Path of model to be used: ")
     # pred_path = input("Enter path of the image: ")
     # target_name  = input("Enter path of the reference image: ")
-    filename = cur_model
-    pred_path = cur_image
-    image = cv2.imread(pred_path)
+    x = input("Enter test case number: ")
 
+    filename = cur_model
+    pred_path = "../results/test" + str(x) + "/original.png"
+    target_name = "../data/malaria/malaria/special/standard.png"
+    image = transform(pred_path, target_name)
+    plt.imsave("../results/test1/transformed.png", image)
     range_y, range_x, channels = image.shape
     disp_image = cv2.imread(pred_path)
     # disp_image = disp_image[55:-54, 55:-54]

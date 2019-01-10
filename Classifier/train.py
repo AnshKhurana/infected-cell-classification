@@ -11,7 +11,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.externals import joblib
 from organize_data import load_train
 
-img_size = 64
+img_size = 32
 num_channels = 3
 classes = ["Normal", "Infected"]
 
@@ -35,12 +35,12 @@ print(images[0].shape)
 print("Data loaded.")
 
 
-x_train, x_test, y_train_v, y_test_v = train_test_split(images, labels, test_size = validation_size, random_state = 41)
+x_train, x_test, y_train_v, y_test_v = train_test_split(images, labels, test_size=validation_size, random_state=41)
 
 
 print("Dataset splitted.")
 
-rf = RandomForestClassifier()
+rf = RandomForestClassifier(n_estimators=120)
 
 # Fit model
 rf.fit(x_train, y_train_v)
@@ -64,7 +64,8 @@ print("Testing accuracy: " + str(sklearn.metrics.accuracy_score(y_true=y_test_v,
 # Saving current Model
 
 # save the model to disk
-filename = 'Grayscale_64_600.sav'
+
+filename = input("Name this model: ")
 pickle.dump(rf, open(filename, 'wb'))
 
 
